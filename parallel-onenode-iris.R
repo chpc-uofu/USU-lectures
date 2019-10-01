@@ -1,12 +1,12 @@
 library(parallel)
 library(foreach)
 library(doParallel)
-ncores <- Sys.getenv("SLURM_CPUS_PER_NODE")
-if (ncores == '') {
-  ncores <- 2
+ntasks <- Sys.getenv("SLURM_NTASKS")
+if (ntasks == '') {
+  ntasks <- 2
 } else {
-  ncores <- stroi(ncores) } 
-cl <- makeCluster(2)
+  ntasks <- strtoi(ntasks) } 
+cl <- makeCluster(ntasks)
 registerDoParallel(cl)
 x <- iris[which(iris[,5] != "setosa"), c(1,5)]
 trials <- 10000
