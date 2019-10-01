@@ -14,3 +14,5 @@ system.time({
   coefficients(result1)
  }
 })
+stopCluster(cl)
+
