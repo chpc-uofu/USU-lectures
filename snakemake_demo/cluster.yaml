@@ -1,0 +1,7 @@
+# cluster.yaml - cluster configuration for demo.snakefile
+__default__:
+    name: notchpeak
+    partition: notchpeak-shared-short
+    account: notchpeak-shared-short
+    time: 0:15:00
+    nodes: 1
