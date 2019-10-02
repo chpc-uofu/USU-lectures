@@ -7,4 +7,4 @@ module load snakemake/5.6.0
 snakemake -s demo.snakefile \
 	--cluster-config cluster.yaml \
 	--cluster "sbatch -M {cluster.name} -p {cluster.partition} -A {cluster.account} -N {cluster.nodes} -J {rule} -t {cluster.time}" \
-	--jobs 3
+	--jobs 10
